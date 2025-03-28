@@ -41,10 +41,9 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(69, 110);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Location = new System.Drawing.Point(52, 89);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(174, 20);
+            this.lblNombre.Size = new System.Drawing.Size(151, 17);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Ingrese un Nombre:";
             this.lblNombre.Click += new System.EventHandler(this.label1_Click);
@@ -52,70 +51,65 @@
             // txtBoxNombre
             // 
             this.txtBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxNombre.Location = new System.Drawing.Point(279, 114);
-            this.txtBoxNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBoxNombre.Location = new System.Drawing.Point(209, 93);
             this.txtBoxNombre.Name = "txtBoxNombre";
-            this.txtBoxNombre.Size = new System.Drawing.Size(207, 15);
+            this.txtBoxNombre.Size = new System.Drawing.Size(155, 13);
             this.txtBoxNombre.TabIndex = 1;
             // 
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(493, 106);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Location = new System.Drawing.Point(370, 86);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(120, 32);
+            this.btnAgregar.Size = new System.Drawing.Size(90, 26);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lstBoxIzquierda
             // 
             this.lstBoxIzquierda.FormattingEnabled = true;
-            this.lstBoxIzquierda.ItemHeight = 16;
-            this.lstBoxIzquierda.Location = new System.Drawing.Point(61, 188);
-            this.lstBoxIzquierda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstBoxIzquierda.Location = new System.Drawing.Point(46, 153);
             this.lstBoxIzquierda.Name = "lstBoxIzquierda";
-            this.lstBoxIzquierda.Size = new System.Drawing.Size(227, 196);
+            this.lstBoxIzquierda.Size = new System.Drawing.Size(171, 160);
             this.lstBoxIzquierda.TabIndex = 3;
             // 
             // lstBoxDerecha
             // 
             this.lstBoxDerecha.FormattingEnabled = true;
-            this.lstBoxDerecha.ItemHeight = 16;
-            this.lstBoxDerecha.Location = new System.Drawing.Point(401, 188);
-            this.lstBoxDerecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstBoxDerecha.Location = new System.Drawing.Point(301, 153);
             this.lstBoxDerecha.Name = "lstBoxDerecha";
-            this.lstBoxDerecha.Size = new System.Drawing.Size(227, 196);
+            this.lstBoxDerecha.Size = new System.Drawing.Size(171, 160);
             this.lstBoxDerecha.TabIndex = 4;
             // 
             // btnSimple
             // 
             this.btnSimple.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSimple.Location = new System.Drawing.Point(297, 223);
-            this.btnSimple.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSimple.Location = new System.Drawing.Point(223, 181);
             this.btnSimple.Name = "btnSimple";
-            this.btnSimple.Size = new System.Drawing.Size(100, 28);
+            this.btnSimple.Size = new System.Drawing.Size(75, 23);
             this.btnSimple.TabIndex = 5;
             this.btnSimple.Text = ">";
             this.btnSimple.UseVisualStyleBackColor = true;
+            this.btnSimple.Click += new System.EventHandler(this.btnSimple_Click);
             // 
             // btnDoble
             // 
             this.btnDoble.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoble.Location = new System.Drawing.Point(297, 284);
-            this.btnDoble.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDoble.Location = new System.Drawing.Point(223, 231);
             this.btnDoble.Name = "btnDoble";
-            this.btnDoble.Size = new System.Drawing.Size(100, 28);
+            this.btnDoble.Size = new System.Drawing.Size(75, 23);
             this.btnDoble.TabIndex = 6;
             this.btnDoble.Text = ">>";
             this.btnDoble.UseVisualStyleBackColor = true;
+            this.btnDoble.Click += new System.EventHandler(this.btnDoble_Click);
             // 
             // Ejercicio1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(683, 463);
+            this.ClientSize = new System.Drawing.Size(512, 376);
             this.Controls.Add(this.btnDoble);
             this.Controls.Add(this.btnSimple);
             this.Controls.Add(this.lstBoxDerecha);
@@ -123,7 +117,6 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtBoxNombre);
             this.Controls.Add(this.lblNombre);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Ejercicio1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nombres";

@@ -29,5 +29,62 @@ namespace TP1_GRUPO_20
             formPrincipal.Show();
             
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (txtBoxNombre.Text.Trim() != "")
+            {
+                string nuevoNombre = txtBoxNombre.Text.Trim().ToUpper();
+
+                bool existe = lstBoxIzquierda.FindStringExact(nuevoNombre) != -1;
+
+                if (!existe)
+                {
+                    lstBoxIzquierda.Items.Add(txtBoxNombre.Text.Trim());
+                    txtBoxNombre.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("El nombre ya fue ingresado","Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe ingresar un nombre", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnSimple_Click(object sender, EventArgs e)
+        {
+            if (lstBoxIzquierda.SelectedIndex != -1) 
+            {
+                string seleccionado = lstBoxIzquierda.SelectedItem.ToString();
+                lstBoxDerecha.Items.Add(seleccionado); 
+                lstBoxIzquierda.Items.Remove(seleccionado);
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un item para moverlo.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDoble_Click(object sender, EventArgs e)
+        {
+            if (lstBoxIzquierda.Items.Count > 0)
+            {
+                foreach (string nombres in lstBoxIzquierda.Items)
+                {
+                    lstBoxDerecha.Items.Add(nombres);
+                }
+
+                    lstBoxIzquierda.Items.Clear();
+            }
+            else
+            {
+                MessageBox.Show("No hay items para mover.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
     }
 }
+

@@ -23,6 +23,44 @@ namespace TP1_GRUPO_20
         {
             formprincipal.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string textoSeleccionado = "Usted seleccono los siguientes elementos:\n";  
+            if (radBtnFem.Checked)
+            {
+                textoSeleccionado += "Sexo: Femenino\n";
+            }
+            else if (radBtnMasc.Checked)
+            {
+                textoSeleccionado += "Sexo: Masculino\n";
+            }
+
+            if (radBtnCasado.Checked)
+            {
+                textoSeleccionado += "Estado Civil: Casado\n";
+            }
+            else if (radBtnSoltero.Checked)
+            {
+                textoSeleccionado += "Estado Civil: Soltero\n";
+            }
+
+            if (checkLstBox.CheckedItems.Count > 0)   // Verifica si hay algo seleccionado, si se selecciono, mostramos lo siguiente: 
+            {
+                textoSeleccionado += "Oficio: \n";
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar por lo menos un oficio.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+                foreach (string s in checkLstBox.CheckedItems)
+                {
+                    textoSeleccionado += "- " + s.ToString() + "\n";
+                }
+
+            lblCont.Text = textoSeleccionado;
+            lblCont.Show();
+        }
     }
 
 }
