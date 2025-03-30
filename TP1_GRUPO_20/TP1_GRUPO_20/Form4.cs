@@ -48,18 +48,19 @@ namespace TP1_GRUPO_20
             if (checkLstBox.CheckedItems.Count > 0)   // Verifica si hay algo seleccionado, si se selecciono, mostramos lo siguiente: 
             {
                 textoSeleccionado += "Oficio: \n";
+            foreach (string s in checkLstBox.CheckedItems)
+            {
+                textoSeleccionado += "- " + s.ToString() + "\n";
+            }
+                lblCont.Text = textoSeleccionado;
+                lblCont.Show();
             }
             else
             {
                 MessageBox.Show("Debe seleccionar por lo menos un oficio.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblCont.Text = "";
             }
-                foreach (string s in checkLstBox.CheckedItems)
-                {
-                    textoSeleccionado += "- " + s.ToString() + "\n";
-                }
 
-            lblCont.Text = textoSeleccionado;
-            lblCont.Show();
         }
     }
 

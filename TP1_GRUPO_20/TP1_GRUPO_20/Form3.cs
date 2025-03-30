@@ -66,7 +66,7 @@ namespace TP1_GRUPO_20
             // si está -> cartel de error
             if (existe)
             {
-                MessageBox.Show("Elemento repetido", "Atención");
+                MessageBox.Show("Elemento repetido", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return ;
             }
             lbElementos.Items.Add(elemento);
